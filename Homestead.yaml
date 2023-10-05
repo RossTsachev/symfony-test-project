@@ -1,0 +1,34 @@
+ip: 192.168.56.56
+memory: 2048
+cpus: 2
+provider: virtualbox
+authorize: ~/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+folders:
+    -
+        map: /home/ross/Code/Tutorials/symfony-project
+        to: /home/vagrant/code
+sites:
+    -
+        map: homestead.test
+        to: /home/vagrant/code/public
+        type: symfony4
+databases:
+    - homestead
+features:
+    -
+        mysql: true
+    -
+        mariadb: false
+    -
+        postgresql: false
+    -
+        ohmyzsh: false
+    -
+        webdriver: false
+services:
+    -
+        enabled: [mysql]
+name: symfony-project
+hostname: symfony-project

@@ -15,6 +15,7 @@
         "symfony/yaml": "6.3.*"
     },
     "require-dev": {
+        "laravel/homestead": "^14.4"
     },
     "config": {
         "allow-plugins": {
